@@ -20,15 +20,16 @@ okgoogle.stop(); //Stops recognition
 ```javascript
 var recipe = ["1. Add flour","2. Mix thoroughly","3. Bake for 30 minutes"];
 var currentStepNumber = 0;
-var okgoogle = new OKGoogle(["OK Cookbook","okay cookbook"]);
+var okgoogle = new OKGoogle(["OK Cookbook","okay cookbook","OK cook book", "okay cook book"]);
 okgoogle.setCallback(function(event){
     if (event.contains("next step")){
         currentStepNumber++;
-        alert(recipe(currentStepNumber));
+        alert(recipe[currentStepNumber]);
     } else if (event.contains("previous step")){
         currentStepNumber -= 1;
-        alert(recipe(currentStepNumber));
+        alert(recipe[currentStepNumber]);
     }
 });
 okgoogle.start();
+alert(recipe[currentStepNumber]);
 ```
