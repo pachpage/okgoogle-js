@@ -33,3 +33,4 @@ okgoogle.setCallback(function(event){
 okgoogle.start();
 alert(recipe[currentStepNumber]);
 ```
+[View demo](https://rawgit.com/pachpage/okgoogle-js/master/demo/demo.html)
