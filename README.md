@@ -12,7 +12,7 @@ var okgoogle = new OKGoogle([phrase]); //Creates new OK Google object
 okgoogle.callback = function(event){ //Sets callback for when the user says, "OK Google"
     console.log(event.transcript); //What the user said after "OK Google"
     event.contains(string); //Returns boolean representing whether the string inputted is in the transcript
-}
+};
 okgoogle.start(); //Starts recognition
 okgoogle.stop(); //Stops recognition
 ```
@@ -24,11 +24,11 @@ var okgoogle = new OKGoogle(["OK Cookbook","okay cookbook"]);
 okgoogle.callback = function(event){
     if (event.contains("next step")){
         currentStepNumber++;
-        alert(recipe(currentStepNumber);
+        alert(recipe(currentStepNumber));
     } else if (event.contains("previous step")){
         currentStepNumber -= 1;
-        alert(recipe(currentStepNumber);
+        alert(recipe(currentStepNumber));
     }
-}
+};
 okgoogle.start();
 ```
