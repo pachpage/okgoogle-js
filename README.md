@@ -6,12 +6,12 @@ Include `<script src="okgoogle.js" type="text/javascript"></script>` in the `<he
 var okgoogle = new OKGoogle([phrase]); //Creates new OK Google object
   /*
     The phrase is an array of phrases that can trigger the callback
-    The default phrase to listen to is "OK Google"
-    When listening for the phrase, the recognition is case-insensitive
+    The default phrase to listen for is "OK Google"
+    When listening for the phrase, the recognition is not case-sensitive
   */
 okgoogle.setCallback(function(event){ //Sets callback for when the user says, "OK Google"
     console.log(event.transcript); //What the user said after "OK Google"
-    event.contains(string); //Returns boolean representing whether the string inputted is in the transcript
+    event.contains(string); //Returns boolean representing whether a string is in the transcript
 });
 okgoogle.start(); //Starts recognition
 okgoogle.stop(); //Stops recognition
